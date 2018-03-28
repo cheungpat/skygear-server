@@ -43,6 +43,7 @@ const (
 	TypeSerial                = "serial UNIQUE"
 	TypeBigInteger            = "bigint"
 	TypeGeometry              = "geometry"
+	TypeDecimal               = "decimal"
 )
 
 func pqDataType(dataType skydb.DataType) string {
@@ -67,6 +68,8 @@ func pqDataType(dataType skydb.DataType) string {
 		return TypeSerial
 	case skydb.TypeGeometry:
 		return TypeGeometry
+	case skydb.TypeDecimal:
+		return TypeDecimal
 	}
 }
 
